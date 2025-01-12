@@ -30,16 +30,17 @@ El elemento es la etiqueta de apertura, seguida del contenido, seguido de la eti
 Los elementos se pueden colocar dentro de otros elementos. Esto se llama anidamiento . Si quisiéramos decir que nuestro gato está muy gruñón, podríamos incluir la palabra muy en un <strong>elemento, lo que significa que la palabra debe tener un formato de texto más fuerte:
 
 html
-```markdown
+```html
 <p>My cat is <strong>very</strong> grumpy.</p>
-
+```
 Hay una forma correcta y otra incorrecta de realizar la anidación. abrimos el pelemento primero y luego abrimos el strongelemento. Para una anidación adecuada, debemos cerrar el strongelemento primero, antes de cerrar el p.
 
 El siguiente es un ejemplo de la forma incorrecta de realizar la anidación:
 
 html
+```html
 <p>My cat is <strong>very grumpy.</p></strong> ❌
-
+```
 Las etiquetas deben abrirse y cerrarse de manera que queden dentro o fuera una de la otra .
 el navegador debe adivinar cuál es su intención. Este tipo de adivinación puede generar resultados inesperados.
 
@@ -50,6 +51,7 @@ No todos los elementos siguen el patrón de una etiqueta de apertura, una de con
 <img
   src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
   alt="Thiago Elias Barbero" />
+```
 
 Esto produciría el siguiente resultado:
 ![FireFox](images/imageFirefox.png)
@@ -80,11 +82,15 @@ Un atributo debe tener:
 # Omitir comillas alrededor de los valores de los atributos
  Si observa el código de muchos otros sitios, puede encontrar varios estilos de marcado extraños, incluidos valores de atributos sin comillas. Esto está permitido en determinadas circunstancias, pero también puede dañar su marcado en otras circunstancias. El elemento en el fragmento de código a continuación, <a>, se llama ancla. Las anclas encierran texto y lo convierten en enlaces. El hrefatributo especifica la dirección web a la que apunta el enlace. Puede escribir esta versión básica a continuación solo con el hrefatributo, de esta manera:
  
+ ```html
  <a href=https://www.mozilla.org/>favorite website</a>
+```
 
  Los anclajes también pueden tener un titleatributo, una descripción de la página enlazada. Sin embargo, tan pronto como los agregamos titlede la misma manera que el hrefatributo, surgen problemas:
 
+```html
  <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
+```
 
  Como se escribió anteriormente, el navegador malinterpreta el marcado, confundiendo el titleatributo con tres atributos: un atributo de título con el valor The, y dos atributos booleanos, Mozillay homepage. Obviamente, esto no es intencional. Provocará errores o un comportamiento inesperado, como puede ver en el ejemplo en vivo a continuación. 
  
@@ -93,11 +99,11 @@ Un atributo debe tener:
 
 # ¿Comillas simples o dobles?
  En este artículo, también notarás que los atributos están entre comillas dobles. Sin embargo, es posible que veas comillas simples en algún código HTML. Esto es una cuestión de estilo. Puedes elegir libremente la que prefieras. Ambas líneas son equivalentes:
-
+```html
  <a href='https://www.example.com'>A link to my example.</a>
 
  <a href="https://www.example.com">A link to my example.</a>
-
+```
  #### Asegúrese de no mezclar comillas simples y dobles. 
 
  Para utilizar comillas dentro de otras comillas del mismo tipo (comillas simples o comillas dobles), utilice referencias de caracteres . Lo veremos mas adelante.
@@ -105,7 +111,7 @@ Un atributo debe tener:
 
 # Anatomía de un documento HTML
 Los elementos HTML individuales no son muy útiles por sí solos. A continuación, examinemos cómo se combinan los elementos individuales para formar una página HTML completa:
-
+```html
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -116,7 +122,7 @@ Los elementos HTML individuales no son muy útiles por sí solos. A continuació
     <p>This is my page</p>
   </body>
 </html>
-
+```
 Aquí tenemos:
  <!DOCTYPE html> no es una etiqueta HTML, sino una declaración que asegura que los navegadores interpretan tu documento correctamente y en modo estándar, ayudando a garantizar un comportamiento predecible en todos los navegadores modernos.
 
@@ -126,20 +132,22 @@ Aquí tenemos:
 
  <meta charset="utf-8">: El elemento <meta>es una etiqueta que proporciona metadatos sobre el documento HTML, es decir, información que no se muestra directamente en la página, pero que es importante para los navegadores y motores de búsqueda. El atributo especifica la codificación de caracteres para su documento como UTF-8, que incluye la mayoría de los caracteres de la gran mayoría de los idiomas escritos por humanos. Con esta configuración, la página ahora puede manejar cualquier contenido textual que pueda contener
 
+```html
  <title></title>: El <title>elemento. Establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página.
 
  <body></body>: El <body>elemento. Contiene todo el contenido que se muestra en la página, incluidos texto, imágenes, videos, juegos, pistas de audio reproducibles y cualquier otra cosa.
-
+```
 
 # Espacios en blanco en HTML
 En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos espacios en blanco en el código. Esto es opcional. Estos dos fragmentos de código son equivalentes:
  
+ ```html
  <p id="noWhitespace">Dogs are silly.</p>
 
  <p id="whitespace">Dogs
     are
         silly.</p>
-
+ ```
  No importa cuánto espacio en blanco utilices dentro del contenido de un elemento HTML (que puede incluir uno o más caracteres de espacio, pero también saltos de línea), el analizador HTML reduce cada secuencia de espacios en blanco a un solo espacio al representar el código. Entonces, ¿por qué utilizar tanto espacio en blanco? La respuesta es la legibilidad.
 
  Puede resultar más fácil comprender lo que sucede en su código si lo tiene bien formateado. En nuestro HTML, cada elemento anidado tiene una sangría de dos espacios más que el que se encuentra dentro. Usted decide el estilo de formato cuántos espacios para cada nivel de sangría.
@@ -158,10 +166,11 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
  
  En el siguiente ejemplo, hay dos párrafos:
 
+```html
  <p>In HTML, you define a paragraph using the <p> element.</p>
 
  <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
-
+```
  En la salida en vivo que se muestra a continuación, puede ver que el primer párrafo está mal. El navegador interpreta la segunda instancia de <p>como el inicio de un nuevo párrafo. El segundo párrafo se ve bien porque tiene corchetes angulares con referencias de caracteres.
 
  ![espaciosEnBlanco](images/ejemCaractsSpeciales.png)
@@ -180,6 +189,36 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
  Como puede ver a continuación, solo se muestra el primer párrafo en la salida en vivo.
  ![espaciosEnBlanco](images/comentEjem.png)
+
+# ¿Qué hay en el Head? Metadatos de la página web
+ El encabezado de un documento HTML es la parte que no se muestra en el navegador web cuando se carga la página. Contiene información de metadatos, como la página <title>, enlaces a CSS, enlaces a faviconos personalizados y otros metadatos (datos sobre el HTML, como el autor y palabras clave importantes que describen el documento).
+
+ Los navegadores web utilizan la información contenida en el encabezado para representar correctamente el documento HTML. 
+
+ # ¿Qué es el encabezado HTML?
+  El encabezado HTML es el contenido del <head>elemento. A diferencia del contenido del <body>elemento (que se muestra en la página cuando se carga en un navegador), el contenido del encabezado no se muestra en la página. En cambio, la función del encabezado es contener metadatos sobre el documento.
+
+```html
+     <head>
+        <meta charset="utf-8" />
+        <title>My test page</title>
+     </head>
+```
+ Sin embargo, en páginas más grandes, el encabezado puede llegar a ser bastante grande. 
+
+# Agregar un título
+
+ El <title>elemento son metadatos que representan el título del documento HTML general (no el contenido del documento).
+
+ ![imagentitulo](images/imageTitle.png)
+
+ Los <title>contenidos también se utilizan en los resultados de búsqueda, como verás a continuación.
+
+
+# Metadatos: el <meta>elemento
+Los metadatos son datos que describen datos, y HTML tiene una forma "oficial" de agregar metadatos a un documento: el <meta>elemento. Por supuesto, el resto de elementos de los que hablamos en este artículo también se pueden considerar metadatos. Hay muchos tipos diferentes de <meta>elementos que se pueden incluir en el archivo de tu página <head>, pero no intentaremos explicarlos todos en esta etapa, ya que sería demasiado confuso.
+
+
 
 
 ---
