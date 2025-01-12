@@ -216,7 +216,160 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
 
 # Metadatos: el <meta>elemento
-Los metadatos son datos que describen datos, y HTML tiene una forma "oficial" de agregar metadatos a un documento: el <meta>elemento. Por supuesto, el resto de elementos de los que hablamos en este artículo también se pueden considerar metadatos. Hay muchos tipos diferentes de <meta>elementos que se pueden incluir en el archivo de tu página <head>, pero no intentaremos explicarlos todos en esta etapa, ya que sería demasiado confuso.
+ Los metadatos son datos que describen datos, y HTML tiene una forma "oficial" de agregar metadatos a un documento: el <meta>elemento. Por supuesto, el resto de elementos de los que hablamos en este artículo también se pueden considerar metadatos. Hay muchos tipos diferentes de <meta>elementos que se pueden incluir en el archivo de tu página <head>, pero no intentaremos explicarlos todos en esta etapa, ya que sería demasiado confuso.
+
+ Cómo especificar la codificación de caracteres de su documento
+ En el ejemplo que vimos arriba, se incluyó esta línea:
+
+ ```html
+ <meta charset="utf-8" />
+ ```
+
+ Este elemento especifica la codificación de caracteres del documento, es decir, el conjunto de caracteres que el documento puede utilizar. utf-8es un conjunto de caracteres universal que incluye prácticamente cualquier carácter de cualquier idioma. Esto significa que su página web podrá mostrar cualquier idioma, por lo que es una buena idea configurarlo en todas las páginas web que cree. 
+ 
+ Nota: algunos navegadores (como Chrome) corrigen automáticamente las codificaciones incorrectas, por lo que, según el navegador que uses, es posible que no veas este problema. De todas formas, debes configurar una codificación utf-8en tu página para evitar posibles problemas en otros navegadores.
+
+# Aprendizaje activo: Experimente con la codificación de caracteres
+
+ Agregar un autor y una descripción
+Muchos <meta>elementos incluyen namey contentatribuyen:
+
+ name: especifica el tipo de metaelemento que es; qué tipo de información contiene.
+ conten: tespecifica el contenido meta real.
+ Dos de estos metaelementos que son útiles para incluir en tu página definen el autor de la página y brindan una descripción concisa de la misma. Veamos un ejemplo:
+```html
+<meta name="author" content="Chris Mills" />
+<meta
+  name="description"
+  content="The MDN Web Docs Learning Area aims to provide
+complete beginners to the Web with all they need to know to get
+started with developing websites and applications." />
+```
+
+ Especificar un autor es beneficioso de muchas maneras: es útil para saber quién escribió la página, si tienes alguna pregunta sobre el contenido y te gustaría contactarlo. Algunos sistemas de administración de contenido tienen funciones para extraer automáticamente la información del autor de la página y ponerla a disposición para tales fines.
+
+ Especificar una descripción que incluya palabras clave relacionadas con el contenido de su página es útil ya que tiene el potencial de hacer que su página aparezca más arriba en las búsquedas relevantes realizadas en los motores de búsqueda (estas actividades se denominan Optimización de motores de búsqueda o SEO ).
+
+# Aprendizaje activo: El uso de la descripción en los buscadores
+La descripción también se utiliza en las páginas de resultados de los motores de búsqueda. Realicemos un ejercicio para explorar esto
+
+```html
+<meta
+  name="description"
+  content="The MDN Web Docs site
+  provides information about Open Web technologies
+  including HTML, CSS, and APIs for both websites and
+  progressive web apps." />
+```
+![metadatos](images/ejemploMetadatos.png)
+
+Nota: Muchas <meta>funciones ya no se utilizan. Por ejemplo, el <meta>elemento de palabra clave (html<meta name="keywords" content="fill, in, your, keywords, here">), que se supone que proporciona palabras clave para que los motores de búsqueda determinen la relevancia de esa página para diferentes términos de búsqueda, es ignorado por los motores de búsqueda, porque los spammers simplemente llenaban la lista de palabras clave con cientos de palabras clave, lo que sesgaba los resultados.
+ 
+# Otros tipos de metadatos
+A medida que navegue por la web, también encontrará otros tipos de metadatos. Muchas de las funciones que verá en los sitios web son creaciones exclusivas diseñadas para proporcionar a ciertos sitios (como los sitios de redes sociales) información específica que pueden usar.
+
+Por ejemplo, [Open Graph Data](https://ogp.me/) es un protocolo de metadatos que inventó Facebook para proporcionar metadatos más completos a los sitios web. En el código fuente de MDN Web Docs, encontrará lo siguiente:
+
+```html
+<meta
+  property="og:image"
+  content="https://developer.mozilla.org/mdn-social-share.png" />
+<meta
+  property="og:description"
+  content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both websites
+and HTML Apps." />
+<meta property="og:title" content="Mozilla Developer Network" />
+```
+
+Un efecto de esto es que cuando se vincula a MDN Web Docs en Facebook, el enlace aparece junto con una imagen y una descripción: una experiencia más rica para los usuarios.
+
+![metadatos](images/imagenMozilla.png)
+
+# Cómo agregar iconos personalizados a su sitio
+Para enriquecer aún más el diseño de su sitio, puede agregar referencias a íconos personalizados en sus metadatos, y estos se mostrarán en ciertos contextos. El más utilizado es el favicon (abreviatura de "ícono de favoritos", en referencia a su uso en las listas de "favoritos" o "marcadores" de los navegadores).
+
+El humilde favicono existe desde hace muchos años. Es el primer icono de este tipo: un icono cuadrado de 16 píxeles que se utiliza en varios lugares. Es posible que veas (según el navegador) los faviconos en la pestaña del navegador que contiene cada página abierta y junto a las páginas marcadas en el panel de marcadores.
+
+Se puede agregar un favicon a tu página de la siguiente manera:
+
+ * Guardándolo en el mismo directorio que la página de índice del sitio, guardado en . icoformato (la mayoría también admite faviconos en formatos más comunes como .gifo .png)
+
+ * Agregando la siguiente línea en tu bloque HTML <head>para hacer referencia a él:
+
+```html
+ <link rel="icon" href="favicon.ico" type="image/x-icon" />
+ ```
+A continuación se muestra un ejemplo de un favicono en un panel de marcadores:
+
+![mozillaFavicon](images/mozillaFavicon.png)
+
+También es posible que necesites distintos iconos para distintos contextos. Por ejemplo, encontrarás esto en el código fuente de la página de inicio de MDN Web Docs:
+
+```html
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+Esta es una forma de hacer que el sitio muestre un ícono cuando se guarde en la pantalla de inicio de un dispositivo Apple. Es posible que incluso desee proporcionar íconos diferentes para diferentes dispositivos, para garantizar que el ícono se vea bien en todos los dispositivos. Por ejemplo:
+
+```html
+<!-- iPad Pro with high-resolution Retina display: -->
+<link
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x resolution iPhone: -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- non-Retina iPad, iPad mini, etc.: -->
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x resolution iPhone and other devices: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
+<!-- basic favicon -->
+<link rel="icon" href="/favicon.ico" />
+```
+
+Los comentarios explican para qué se utiliza cada ícono: estos elementos cubren cosas como proporcionar un lindo ícono de alta resolución para usar cuando el sitio web se guarda en la pantalla de inicio de un iPad.
+
+No te preocupes demasiado por implementar todos estos tipos de íconos ahora mismo: se trata de una función bastante avanzada y no se espera que tengas conocimientos sobre ella para avanzar en el curso. El objetivo principal de este artículo es informarte sobre qué son esas cosas, en caso de que te las encuentres mientras navegas por el código fuente de otros sitios web. Si quieres aprender más sobre todos estos valores y cómo elegirlos, lee la [<link>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) página de referencia del elemento.
+
+# Aplicación de CSS y JavaScript a HTML
+Casi todos los sitios web que utilizas en la actualidad emplean CSS para que tengan un aspecto atractivo y JavaScript para potenciar la funcionalidad interactiva, como reproductores de vídeo, mapas, juegos y más. Estos se aplican con mayor frecuencia a una página web mediante el <link>elemento y el <script> elemento, respectivamente.
+
+El <link>elemento siempre debe ir dentro del encabezado del documento. Esto requiere dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo:
+
+```html
+<link rel="stylesheet" href="my-css-file.css" />
+```
+
+El <script> elemento también debe ir en el encabezado y debe incluir un srcatributo que contenga la ruta al JavaScript que desea cargar, y defer, que básicamente le indica al navegador que cargue el JavaScript después de que la página haya terminado de analizar el HTML. Esto es útil ya que garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtenga errores resultantes de que JavaScript intente acceder a un elemento HTML que aún no existe en la página. En realidad, hay varias formas de manejar la carga de JavaScript en su página, pero esta es la más confiable para usar en los navegadores modernos (para otros, lea Estrategias de carga de scripts ).
+
+```html
+<script src="my-js-file.js" defer></script>
+```
+
+# Establecer el idioma principal del documento
+Por último, vale la pena mencionar que puedes (y realmente deberías) configurar el idioma de tu página. Esto se puede hacer agregando el atributo lang a la etiqueta HTML de apertura (como se ve en el meta-example.html y se muestra a continuación).
+```html
+<html lang="en-US">
+  …
+</html>
+```
+
+Esto resulta útil de muchas maneras. Los motores de búsqueda indexarán su documento HTML de manera más eficaz si se configura su idioma lo que le permitirá aparecer correctamente en los resultados específicos del idioma.
+
+También puedes configurar subsecciones de tu documento para que se reconozcan en distintos idiomas. Por ejemplo, podríamos configurar nuestra sección en japonés para que se reconozca como japonés, de la siguiente manera:
+```html
+<p>Japanese example: <span lang="ja">ご飯が熱い。</span>.</p>
+```
+
+Estos códigos están definidos por la norma [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) . Puedes encontrar más información sobre ellos en Etiquetas de idioma en [HTML y XML](https://www.w3.org/International/articles/language-tags/) .
 
 
 
