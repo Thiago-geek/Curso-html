@@ -27,7 +27,7 @@ El elemento es la etiqueta de apertura, seguida del contenido, seguido de la eti
 
 
 # Elementos anidados
-Los elementos se pueden colocar dentro de otros elementos. Esto se llama anidamiento . Si quisiéramos decir que nuestro gato está muy gruñón, podríamos incluir la palabra muy en un <strong>elemento, lo que significa que la palabra debe tener un formato de texto más fuerte:
+Los elementos se pueden colocar dentro de otros elementos. Esto se llama anidamiento . Si quisiéramos decir que nuestro gato está muy gruñón, podríamos incluir la palabra muy en un `<strong>` elemento, lo que significa que la palabra debe tener un formato de texto más fuerte:
 
 html
 ```html
@@ -45,7 +45,7 @@ Las etiquetas deben abrirse y cerrarse de manera que queden dentro o fuera una d
 el navegador debe adivinar cuál es su intención. Este tipo de adivinación puede generar resultados inesperados.
 
 # Elementos vacíos
-No todos los elementos siguen el patrón de una etiqueta de apertura, una de contenido y una de cierre. Algunos elementos constan de una sola etiqueta, que normalmente se utiliza para insertar o incrustar algo en el documento. Dichos elementos se denominan elementos void . Por ejemplo, el <img>elemento incrusta un archivo de imagen en una página:
+No todos los elementos siguen el patrón de una etiqueta de apertura, una de contenido y una de cierre. Algunos elementos constan de una sola etiqueta, que normalmente se utiliza para insertar o incrustar algo en el documento. Dichos elementos se denominan elementos void . Por ejemplo, el `<img>` elemento incrusta un archivo de imagen en una página:
 
 ```html
 <img
@@ -80,7 +80,7 @@ Un atributo debe tener:
 
 
 # Omitir comillas alrededor de los valores de los atributos
- Si observa el código de muchos otros sitios, puede encontrar varios estilos de marcado extraños, incluidos valores de atributos sin comillas. Esto está permitido en determinadas circunstancias, pero también puede dañar su marcado en otras circunstancias. El elemento en el fragmento de código a continuación, <a>, se llama ancla. Las anclas encierran texto y lo convierten en enlaces. El hrefatributo especifica la dirección web a la que apunta el enlace. Puede escribir esta versión básica a continuación solo con el hrefatributo, de esta manera:
+ Si observa el código de muchos otros sitios, puede encontrar varios estilos de marcado extraños, incluidos valores de atributos sin comillas. Esto está permitido en determinadas circunstancias, pero también puede dañar su marcado en otras circunstancias. El elemento en el fragmento de código a continuación, `<a>`, se llama ancla. Las anclas encierran texto y lo convierten en enlaces. El hrefatributo especifica la dirección web a la que apunta el enlace. Puede escribir esta versión básica a continuación solo con el hrefatributo, de esta manera:
  
  ```html
  <a href=https://www.mozilla.org/>favorite website</a>
@@ -124,13 +124,13 @@ Los elementos HTML individuales no son muy útiles por sí solos. A continuació
 </html>
 ```
 Aquí tenemos:
- <!DOCTYPE html> no es una etiqueta HTML, sino una declaración que asegura que los navegadores interpretan tu documento correctamente y en modo estándar, ayudando a garantizar un comportamiento predecible en todos los navegadores modernos.
+ `<!DOCTYPE html>` no es una etiqueta HTML, sino una declaración que asegura que los navegadores interpretan tu documento correctamente y en modo estándar, ayudando a garantizar un comportamiento predecible en todos los navegadores modernos.
 
- <html></html>: El <html>elemento. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como elemento raíz.
+ `<html></html>`: El `<html>` elemento. Este elemento envuelve todo el contenido de la página. A veces se lo conoce como elemento raíz.
 
- <head></head>: El <head>elemento. Este elemento actúa como un contenedor para todo lo que desea incluir en la página HTML, que no sea el contenido que la página mostrará a los visitantes.
+ `<head></head>`: El `<head>` elemento. Este elemento actúa como un contenedor para todo lo que desea incluir en la página HTML, que no sea el contenido que la página mostrará a los visitantes.
 
- <meta charset="utf-8">: El elemento <meta>es una etiqueta que proporciona metadatos sobre el documento HTML, es decir, información que no se muestra directamente en la página, pero que es importante para los navegadores y motores de búsqueda. El atributo especifica la codificación de caracteres para su documento como UTF-8, que incluye la mayoría de los caracteres de la gran mayoría de los idiomas escritos por humanos. Con esta configuración, la página ahora puede manejar cualquier contenido textual que pueda contener
+ `<meta charset="utf-8">`: El elemento `<meta>` es una etiqueta que proporciona metadatos sobre el documento HTML, es decir, información que no se muestra directamente en la página, pero que es importante para los navegadores y motores de búsqueda. El atributo especifica la codificación de caracteres para su documento como UTF-8, que incluye la mayoría de los caracteres de la gran mayoría de los idiomas escritos por humanos. Con esta configuración, la página ahora puede manejar cualquier contenido textual que pueda contener
 
 ```html
  <title></title>: El <title>elemento. Establece el título de la página, que es el título que aparece en la pestaña del navegador en la que se carga la página.
@@ -171,7 +171,7 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
  <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
 ```
- En la salida en vivo que se muestra a continuación, puede ver que el primer párrafo está mal. El navegador interpreta la segunda instancia de <p>como el inicio de un nuevo párrafo. El segundo párrafo se ve bien porque tiene corchetes angulares con referencias de caracteres.
+ En la salida en vivo que se muestra a continuación, puede ver que el primer párrafo está mal. El navegador interpreta la segunda instancia de `<p>` como el inicio de un nuevo párrafo. El segundo párrafo se ve bien porque tiene corchetes angulares con referencias de caracteres.
 
  ![espaciosEnBlanco](images/ejemCaractsSpeciales.png)
 
@@ -181,7 +181,7 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 # Comentarios HTML
  HTML tiene un mecanismo para escribir comentarios en el código. Los navegadores ignoran los comentarios, lo que hace que sean invisibles para el usuario. El propósito de los comentarios es permitirle incluir notas en el código para explicar su lógica o codificación. 
 
- Para escribir un comentario HTML, enciérrelo entre los marcadores especiales <!--y -->. Por ejemplo:
+ Para escribir un comentario HTML, enciérrelo entre los marcadores especiales `<!--y -->`. Por ejemplo:
 
  <p>I'm not inside a comment</p>
 
@@ -191,12 +191,12 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
  ![espaciosEnBlanco](images/comentEjem.png)
 
 # ¿Qué hay en el Head? Metadatos de la página web
- El encabezado de un documento HTML es la parte que no se muestra en el navegador web cuando se carga la página. Contiene información de metadatos, como la página <title>, enlaces a CSS, enlaces a faviconos personalizados y otros metadatos (datos sobre el HTML, como el autor y palabras clave importantes que describen el documento).
+ El encabezado de un documento HTML es la parte que no se muestra en el navegador web cuando se carga la página. Contiene información de metadatos, como la página `<title>`, enlaces a CSS, enlaces a faviconos personalizados y otros metadatos (datos sobre el HTML, como el autor y palabras clave importantes que describen el documento).
 
  Los navegadores web utilizan la información contenida en el encabezado para representar correctamente el documento HTML. 
 
  # ¿Qué es el encabezado HTML?
-  El encabezado HTML es el contenido del <head>elemento. A diferencia del contenido del <body>elemento (que se muestra en la página cuando se carga en un navegador), el contenido del encabezado no se muestra en la página. En cambio, la función del encabezado es contener metadatos sobre el documento.
+  El encabezado HTML es el contenido del `<head>` elemento. A diferencia del contenido del `<body>` elemento (que se muestra en la página cuando se carga en un navegador), el contenido del encabezado no se muestra en la página. En cambio, la función del encabezado es contener metadatos sobre el documento.
 
 ```html
      <head>
@@ -216,7 +216,7 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
 
 # Metadatos: el <meta>elemento
- Los metadatos son datos que describen datos, y HTML tiene una forma "oficial" de agregar metadatos a un documento: el <meta>elemento. Por supuesto, el resto de elementos de los que hablamos en este artículo también se pueden considerar metadatos. Hay muchos tipos diferentes de <meta>elementos que se pueden incluir en el archivo de tu página <head>, pero no intentaremos explicarlos todos en esta etapa, ya que sería demasiado confuso.
+ Los metadatos son datos que describen datos, y HTML tiene una forma "oficial" de agregar metadatos a un documento: el `<meta>` elemento. Por supuesto, el resto de elementos de los que hablamos en este artículo también se pueden considerar metadatos. Hay muchos tipos diferentes de `<meta>` elementos que se pueden incluir en el archivo de tu página `<head>`, pero no intentaremos explicarlos todos en esta etapa, ya que sería demasiado confuso.
 
  Cómo especificar la codificación de caracteres de su documento
  En el ejemplo que vimos arriba, se incluyó esta línea:
@@ -232,7 +232,7 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 # Aprendizaje activo: Experimente con la codificación de caracteres
 
  Agregar un autor y una descripción
-Muchos <meta>elementos incluyen namey contentatribuyen:
+Muchos `<meta>` elementos incluyen namey contentatribuyen:
 
  name: especifica el tipo de metaelemento que es; qué tipo de información contiene.
  conten: tespecifica el contenido meta real.
@@ -263,7 +263,7 @@ La descripción también se utiliza en las páginas de resultados de los motores
 ```
 ![metadatos](images/ejemploMetadatos.png)
 
-Nota: Muchas <meta>funciones ya no se utilizan. Por ejemplo, el <meta>elemento de palabra clave (html<meta name="keywords" content="fill, in, your, keywords, here">), que se supone que proporciona palabras clave para que los motores de búsqueda determinen la relevancia de esa página para diferentes términos de búsqueda, es ignorado por los motores de búsqueda, porque los spammers simplemente llenaban la lista de palabras clave con cientos de palabras clave, lo que sesgaba los resultados.
+Nota: Muchas `<meta>` funciones ya no se utilizan. Por ejemplo, el <meta>elemento de palabra clave (html `<meta name="keywords" content="fill, in, your, keywords, here">`), que se supone que proporciona palabras clave para que los motores de búsqueda determinen la relevancia de esa página para diferentes términos de búsqueda, es ignorado por los motores de búsqueda, porque los spammers simplemente llenaban la lista de palabras clave con cientos de palabras clave, lo que sesgaba los resultados.
  
 # Otros tipos de metadatos
 A medida que navegue por la web, también encontrará otros tipos de metadatos. Muchas de las funciones que verá en los sitios web son creaciones exclusivas diseñadas para proporcionar a ciertos sitios (como los sitios de redes sociales) información específica que pueden usar.
@@ -295,7 +295,7 @@ Se puede agregar un favicon a tu página de la siguiente manera:
 
  * Guardándolo en el mismo directorio que la página de índice del sitio, guardado en . icoformato (la mayoría también admite faviconos en formatos más comunes como .gifo .png)
 
- * Agregando la siguiente línea en tu bloque HTML <head>para hacer referencia a él:
+ * Agregando la siguiente línea en tu bloque HTML `<head>` para hacer referencia a él:
 
 ```html
  <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -340,15 +340,15 @@ Los comentarios explican para qué se utiliza cada ícono: estos elementos cubre
 No te preocupes demasiado por implementar todos estos tipos de íconos ahora mismo: se trata de una función bastante avanzada y no se espera que tengas conocimientos sobre ella para avanzar en el curso. El objetivo principal de este artículo es informarte sobre qué son esas cosas, en caso de que te las encuentres mientras navegas por el código fuente de otros sitios web. Si quieres aprender más sobre todos estos valores y cómo elegirlos, lee la [<link>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) página de referencia del elemento.
 
 # Aplicación de CSS y JavaScript a HTML
-Casi todos los sitios web que utilizas en la actualidad emplean CSS para que tengan un aspecto atractivo y JavaScript para potenciar la funcionalidad interactiva, como reproductores de vídeo, mapas, juegos y más. Estos se aplican con mayor frecuencia a una página web mediante el <link>elemento y el <script> elemento, respectivamente.
+Casi todos los sitios web que utilizas en la actualidad emplean CSS para que tengan un aspecto atractivo y JavaScript para potenciar la funcionalidad interactiva, como reproductores de vídeo, mapas, juegos y más. Estos se aplican con mayor frecuencia a una página web mediante el `<link>` elemento y el `<script>` elemento, respectivamente.
 
-El <link>elemento siempre debe ir dentro del encabezado del documento. Esto requiere dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo:
+El `<link>` elemento siempre debe ir dentro del encabezado del documento. Esto requiere dos atributos, rel="stylesheet", que indica que es la hoja de estilo del documento, y href, que contiene la ruta al archivo de la hoja de estilo:
 
 ```html
 <link rel="stylesheet" href="my-css-file.css" />
 ```
 
-El <script> elemento también debe ir en el encabezado y debe incluir un srcatributo que contenga la ruta al JavaScript que desea cargar, y defer, que básicamente le indica al navegador que cargue el JavaScript después de que la página haya terminado de analizar el HTML. Esto es útil ya que garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtenga errores resultantes de que JavaScript intente acceder a un elemento HTML que aún no existe en la página. En realidad, hay varias formas de manejar la carga de JavaScript en su página, pero esta es la más confiable para usar en los navegadores modernos (para otros, lea Estrategias de carga de scripts ).
+El `<script>` elemento también debe ir en el encabezado y debe incluir un srcatributo que contenga la ruta al JavaScript que desea cargar, y defer, que básicamente le indica al navegador que cargue el JavaScript después de que la página haya terminado de analizar el HTML. Esto es útil ya que garantiza que todo el HTML esté cargado antes de que se ejecute el JavaScript, de modo que no obtenga errores resultantes de que JavaScript intente acceder a un elemento HTML que aún no existe en la página. En realidad, hay varias formas de manejar la carga de JavaScript en su página, pero esta es la más confiable para usar en los navegadores modernos (para otros, lea Estrategias de carga de scripts ).
 
 ```html
 <script src="my-js-file.js" defer></script>
@@ -382,7 +382,7 @@ La mayoría de los textos estructurados se componen de títulos y párrafos, ya 
 
 El contenido estructurado hace que la experiencia de lectura sea más fácil y agradable.
 
-En HTML, cada párrafo debe estar envuelto en un <p>elemento, de la siguiente manera:
+En HTML, cada párrafo debe estar envuelto en un `<p>` elemento, de la siguiente manera:
 ```html
 <p>I am a paragraph, oh yes I am.</p>
 ```
@@ -391,10 +391,10 @@ Cada encabezado debe estar envuelto en un elemento de encabezado:
 ```html
 <h1>I am the title of the story.</h1>
 ```
-Hay seis elementos de encabezado: h1 , h2 , h3 , h4 , h5 y h6 . Cada elemento representa un nivel diferente de contenido en el documento: <h1>representa el encabezado principal, <h2>representa subtítulos, <h3>representa subsubtítulos, etc.
+Hay seis elementos de encabezado: h1 , h2 , h3 , h4 , h5 y h6 . Cada elemento representa un nivel diferente de contenido en el documento: `<h1>` representa el encabezado principal, `<h2>` representa subtítulos, `<h3>` representa subsubtítulos, etc.
 
 # Implementación de la jerarquía estructural
-Por ejemplo, en esta historia, el <h1>elemento representa el título de la historia, los <h2>elementos representan el título de cada capítulo y los <h3>elementos representan subsecciones de cada capítulo:
+Por ejemplo, en esta historia, el `<h1>` elemento representa el título de la historia, los `<h2>` elementos representan el título de cada capítulo y los `<h3>` elementos representan subsecciones de cada capítulo:
 
 ```html
 <h1>The Crushing Bore</h1>
