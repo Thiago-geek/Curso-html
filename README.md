@@ -57,7 +57,7 @@ Esto produciría el siguiente resultado:
 ![FireFox](images/imageFirefox.png)
 
  # Nota: 
- > En HTML, no es necesario agregar un /al final de la etiqueta de un elemento void, por > ejemplo: <img src="images/cat.png" alt="cat" />.
+ > En HTML, no es necesario agregar un /al final de la etiqueta de un elemento void, por > ejemplo: `<img src="images/cat.png" alt="cat" />`.
 
 # Atributos
  Los elementos también pueden tener atributos. Los atributos tienen el siguiente aspecto:
