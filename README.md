@@ -372,6 +372,142 @@ También puedes configurar subsecciones de tu documento para que se reconozcan e
 Estos códigos están definidos por la norma [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) . Puedes encontrar más información sobre ellos en Etiquetas de idioma en [HTML y XML](https://www.w3.org/International/articles/language-tags/) .
 
 
+# Encabezados y párrafos en HTML
+Una de las principales funciones del HTML es dar estructura al texto para que un navegador pueda mostrar un documento HTML de la forma en que lo desea su desarrollador.
+
+Encabezados y párrafos
+La mayoría de los textos estructurados se componen de títulos y párrafos, ya sea que esté leyendo una historia, un periódico, un libro de texto universitario, una revista, etc.
+
+![ParrafosTexto](images/parrafosTexto.png)
+
+El contenido estructurado hace que la experiencia de lectura sea más fácil y agradable.
+
+En HTML, cada párrafo debe estar envuelto en un <p>elemento, de la siguiente manera:
+```html
+<p>I am a paragraph, oh yes I am.</p>
+```
+
+Cada encabezado debe estar envuelto en un elemento de encabezado:
+```html
+<h1>I am the title of the story.</h1>
+```
+Hay seis elementos de encabezado: h1 , h2 , h3 , h4 , h5 y h6 . Cada elemento representa un nivel diferente de contenido en el documento: <h1>representa el encabezado principal, <h2>representa subtítulos, <h3>representa subsubtítulos, etc.
+
+# Implementación de la jerarquía estructural
+Por ejemplo, en esta historia, el <h1>elemento representa el título de la historia, los <h2>elementos representan el título de cada capítulo y los <h3>elementos representan subsecciones de cada capítulo:
+
+```html
+<h1>The Crushing Bore</h1>
+
+<p>By Chris Mills</p>
+
+<h2>Chapter 1: The dark night</h2>
+
+<p>
+  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…
+</p>
+
+<h2>Chapter 2: The eternal silence</h2>
+
+<p>Our protagonist could not so much as a whisper out of the shadowy figure…</p>
+
+<h3>The specter speaks</h3>
+
+<p>
+  Several more hours had passed, when all of a sudden the specter sat bolt
+  upright and exclaimed, "Please have mercy on my soul!"
+</p>
+```
+
+Depende de usted qué representan los elementos involucrados, siempre que la jerarquía tenga sentido. Solo debe tener en cuenta algunas prácticas recomendadas al crear dichas estructuras:
+
+* Lo mejor es utilizar uno solo <h1>por página: este es el encabezado de nivel superior y todos los demás se ubican debajo de este en la jerarquía.
+
+* Asegúrate de utilizar los títulos en el orden correcto en la jerarquía. No utilices <h3>elementos para representar subtítulos seguidos de <h2>otros elementos para representar subtítulos secundarios, ya que eso no tiene sentido y dará lugar a resultados extraños.
+
+* De los seis niveles de encabezado disponibles, debe intentar utilizar no más de tres por página, a menos que considere que es necesario. Los documentos con muchos niveles (por ejemplo, una jerarquía de encabezados profunda) se vuelven difíciles de manejar y de navegar. En tales ocasiones, es recomendable distribuir el contenido en varias páginas, si es posible.
 
 
----
+# ¿Por qué necesitamos la semántica?
+La semántica es un elemento que nos rodea en todas partes: nos basamos en la experiencia previa para saber cuál es la función de un objeto cotidiano; cuando vemos algo, sabemos cuál será su función. Así, por ejemplo, esperamos que un semáforo en rojo signifique "parar" y uno en verde, "avanzar". Las cosas pueden complicarse muy rápidamente si se aplica la semántica incorrecta. (¿Hay algún país que utilice el rojo para significar "avanzar"? Esperamos que no.)
+
+De manera similar, debemos asegurarnos de que estamos utilizando los elementos correctos, dándole a nuestro contenido el significado, la función o la apariencia correcta. En este contexto, el elemento h1 también es un elemento semántico, que le otorga al texto que lo rodea la función (o significado) de "un encabezado de nivel superior en su página".
+
+```html
+<h1>This is a top level heading</h1>
+```
+
+De forma predeterminada, el navegador le dará un tamaño de fuente grande para que parezca un encabezado (aunque podría darle el estilo que quisiera usando CSS). Más importante aún, su valor semántico se usará de múltiples maneras, por ejemplo, por los motores de búsqueda y los lectores de pantalla.
+
+Por otra parte, puedes hacer que cualquier elemento parezca un encabezado de nivel superior. Considera lo siguiente:
+
+```html
+<span style="font-size: 32px; margin: 21px 0; display: block;">
+  Is this a top level heading?
+</span>
+```
+
+Este es un <span>elemento. No tiene semántica. Lo usas para envolver contenido cuando quieres aplicarle CSS (o hacerle algo con JavaScript) sin darle ningún significado adicional. (Descubrirás más sobre esto más adelante en el curso). Le hemos aplicado algo de CSS para que parezca un encabezado de nivel superior, pero como no tiene valor semántico, no obtendrá ninguno de los beneficios adicionales descritos anteriormente. Es una buena idea usar el elemento HTML relevante para el trabajo.
+
+
+# Énfasis e importancia
+El artículo anterior analizó por qué la semántica es importante en HTML y se centró en los encabezados y párrafos. Este artículo continúa con el tema de la semántica y analiza los elementos HTML que aplican énfasis e importancia al texto (en paralelo al texto en cursiva y negrita en los medios impresos).
+
+# ¿Qué son el énfasis y la importancia?
+En el lenguaje humano, a menudo enfatizamos ciertas palabras para alterar el significado de una oración y, a menudo, queremos marcar ciertas palabras como importantes o diferentes de alguna manera. HTML proporciona varios elementos semánticos que nos permiten marcar contenido textual con tales efectos y, en esta sección, veremos algunos de los más comunes.
+
+# Énfasis
+Cuando queremos añadir énfasis en el lenguaje hablado, acentuamos ciertas palabras, alterando sutilmente el significado de lo que decimos. De manera similar, en el lenguaje escrito tendemos a acentuar las palabras poniéndolas en cursiva. Por ejemplo, las siguientes dos oraciones tienen significados diferentes.
+
+> Me alegro de que no llegaras tarde.
+> Me alegro de que no llegaras tarde .
+
+La primera oración suena genuinamente aliviada de que la persona no haya llegado tarde. En cambio, la segunda, con las palabras "me alegro" y "llegó tarde" en cursiva, suena sarcástica o pasivo-agresiva, expresando molestia por el hecho de que la persona haya llegado un poco tarde.
+
+En HTML, utilizamos el <em>elemento (énfasis) para marcar estos casos. Además de hacer que el documento sea más interesante de leer, los lectores de pantalla los reconocen y pueden configurarse para que los lea en un tono de voz diferente. Los navegadores lo escriben en cursiva de forma predeterminada, pero no deberías usar esta etiqueta únicamente para obtener el estilo en cursiva. Para ello, utilizarías un <span>elemento y algo de CSS, o quizás un <i>elemento (ver a continuación).
+
+```html
+<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+```
+
+# Fuerte importancia
+Para enfatizar palabras importantes, solemos ponerlas en relieve en el lenguaje hablado y en negrita en el lenguaje escrito. Por ejemplo:
+
+> Este líquido es altamente tóxico .
+> Cuento contigo, no llegues tarde!
+
+En HTML, utilizamos el <strong>elemento (importancia fuerte) para marcar dichas instancias. Además de hacer que el documento sea más útil, los lectores de pantalla las reconocen y pueden configurarse para que las digan en un tono de voz diferente. Los navegadores le dan estilo a este texto en negrita de forma predeterminada, pero no debería utilizar esta etiqueta únicamente para obtener un estilo en negrita. Para ello, debe utilizar un <span>elemento y algo de CSS, o quizás un <b>elemento (consulte a continuación).
+
+```html
+<p>This liquid is <strong>highly toxic</strong>.</p>
+
+<p>I am counting on you. <strong>Do not</strong> be late!</p>
+```
+
+Puedes anidar fuerte y énfasis uno dentro del otro si lo deseas:
+```html
+<p>This liquid is <strong>highly toxic</strong> — if you drink it, <strong>you may <em>die</em></strong>.</p>
+```
+
+![ImportanciaEnfasis](images/importanciEnfaciss.png)
+
+
+# Cursiva, negrita, subrayado…
+Los elementos que hemos analizado hasta ahora tienen una semántica asociada muy clara. La situación con <b>, <i>, y <u>es algo más complicada. Surgieron para que la gente pudiera escribir texto en negrita, cursiva o subrayado en una época en la que CSS todavía no se admitía o no se admitía en absoluto. Elementos como este, que solo afectan a la presentación y no a la semántica, se conocen como elementos de presentación y ya no deberían utilizarse porque, como hemos visto antes, la semántica es muy importante para la accesibilidad, el SEO, etc.
+
+HTML5 redefinido <b>, <i>y <u>con nuevos roles semánticos, algo confusos.
+
+Esta es la mejor regla que puedes recordar: solo es apropiado usar <b>, <i>, o <u>para transmitir un significado que tradicionalmente se transmite con negrita, cursiva o subrayado cuando no hay un elemento más adecuado (y generalmente lo hay). Considera si <strong>, <em>, <mark>o <span>podrían ser más apropiados.
+
+Mantenga siempre una actitud de accesibilidad. El concepto de cursiva no resulta muy útil para quienes utilizan lectores de pantalla o un sistema de escritura distinto del alfabeto latino.
+
+* <i>se utiliza para transmitir un significado que tradicionalmente se transmite en cursiva: palabras extranjeras, designaciones taxonómicas, términos técnicos, un pensamiento…
+
+* <b>Se utiliza para transmitir un significado que tradicionalmente se transmite en negrita: palabras clave, nombres de productos, frases iniciales…
+
+* <u>se utiliza para transmitir un significado que tradicionalmente se transmite mediante el subrayado: nombre propio, falta de ortografía…
+
+
+# Nota: 
+> Las personas asocian fuertemente el subrayado con los hipervínculos. Por lo tanto, en > la Web, es mejor subrayar únicamente los vínculos. Utilice el <u>elemento cuando sea   > semánticamente apropiado, pero considere usar CSS para cambiar el subrayado
+> predeterminado a algo más apropiado en la Web.
