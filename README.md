@@ -9,6 +9,10 @@ HTML es la tecnología que define el contenido y la estructura de cualquier siti
 ## ¿Qué es HTML?
 HTML (HyperText Markup Language) es un lenguaje de marcado que indica a los navegadores web cómo estructurar las páginas web que visita. Puede ser tan complicado o tan simple como desee el desarrollador web.
 
+<<<<<<< HEAD
+### Nota
+ Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que pueden escribirse en mayúsculas o minúsculas. Sin embargo, se recomienda escribir todas las etiquetas en minúsculas para mantener la coherencia y facilitar la lectura.
+=======
 ---
 ### Nota
  Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que pueden escribirse en mayúsculas o minúsculas. Sin embargo, se recomienda escribir todas las etiquetas en minúsculas para mantener la coherencia y facilitar la lectura.
@@ -184,3 +188,4 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
  texto de prueva
 
 ---
+>>>>>>> origin/main
