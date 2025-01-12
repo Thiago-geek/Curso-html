@@ -9,10 +9,6 @@ HTML es la tecnología que define el contenido y la estructura de cualquier siti
 ## ¿Qué es HTML?
 HTML (HyperText Markup Language) es un lenguaje de marcado que indica a los navegadores web cómo estructurar las páginas web que visita. Puede ser tan complicado o tan simple como desee el desarrollador web.
 
-<<<<<<< HEAD
-### Nota
- Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que pueden escribirse en mayúsculas o minúsculas. Sin embargo, se recomienda escribir todas las etiquetas en minúsculas para mantener la coherencia y facilitar la lectura.
-=======
 ---
 ### Nota
  Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que pueden escribirse en mayúsculas o minúsculas. Sin embargo, se recomienda escribir todas las etiquetas en minúsculas para mantener la coherencia y facilitar la lectura.
@@ -34,6 +30,7 @@ El elemento es la etiqueta de apertura, seguida del contenido, seguido de la eti
 Los elementos se pueden colocar dentro de otros elementos. Esto se llama anidamiento . Si quisiéramos decir que nuestro gato está muy gruñón, podríamos incluir la palabra muy en un <strong>elemento, lo que significa que la palabra debe tener un formato de texto más fuerte:
 
 html
+```markdown
 <p>My cat is <strong>very</strong> grumpy.</p>
 
 Hay una forma correcta y otra incorrecta de realizar la anidación. abrimos el pelemento primero y luego abrimos el strongelemento. Para una anidación adecuada, debemos cerrar el strongelemento primero, antes de cerrar el p.
@@ -46,10 +43,10 @@ html
 Las etiquetas deben abrirse y cerrarse de manera que queden dentro o fuera una de la otra .
 el navegador debe adivinar cuál es su intención. Este tipo de adivinación puede generar resultados inesperados.
 
-
 # Elementos vacíos
 No todos los elementos siguen el patrón de una etiqueta de apertura, una de contenido y una de cierre. Algunos elementos constan de una sola etiqueta, que normalmente se utiliza para insertar o incrustar algo en el documento. Dichos elementos se denominan elementos void . Por ejemplo, el <img>elemento incrusta un archivo de imagen en una página:
 
+```html
 <img
   src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
   alt="Thiago Elias Barbero" />
@@ -185,7 +182,4 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
  ![espaciosEnBlanco](images/comentEjem.png)
 
 
- texto de prueva
-
 ---
->>>>>>> origin/main
