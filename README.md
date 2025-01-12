@@ -56,10 +56,12 @@ No todos los elementos siguen el patrón de una etiqueta de apertura, una de con
 Esto produciría el siguiente resultado:
 ![FireFox](images/imageFirefox.png)
 
- Nota: En HTML, no es necesario agregar un /al final de la etiqueta de un elemento void, por ejemplo: <img src="images/cat.jpg" alt="cat" />.
+ # Nota: 
+ > En HTML, no es necesario agregar un /al final de la etiqueta de un elemento void, por > ejemplo: <img src="images/cat.png" alt="cat" />.
 
 # Atributos
  Los elementos también pueden tener atributos. Los atributos tienen el siguiente aspecto:
+
  ![Atributos](images/atributoImg.png)
 
  Los atributos contienen información adicional sobre el elemento que no aparecerá en el contenido. En este ejemplo, el classatributo es un nombre de identificación que se utiliza para identificar el elemento con información de estilo.
@@ -183,9 +185,11 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
  Para escribir un comentario HTML, enciérrelo entre los marcadores especiales `<!--y -->`. Por ejemplo:
 
+```html
  <p>I'm not inside a comment</p>
 
  <!-- <p>I am!</p> -->
+```
 
  Como puede ver a continuación, solo se muestra el primer párrafo en la salida en vivo.
  ![espaciosEnBlanco](images/comentEjem.png)
@@ -208,11 +212,11 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
 # Agregar un título
 
- El <title>elemento son metadatos que representan el título del documento HTML general (no el contenido del documento).
+ El `<title>` elemento son metadatos que representan el título del documento HTML general (no el contenido del documento).
 
  ![imagentitulo](images/imageTitle.png)
 
- Los <title>contenidos también se utilizan en los resultados de búsqueda, como verás a continuación.
+ Los `<title>`contenidos también se utilizan en los resultados de búsqueda, como verás a continuación.
 
 
 # Metadatos: el <meta>elemento
@@ -227,7 +231,7 @@ En los ejemplos anteriores, es posible que hayas notado que se incluyen muchos e
 
  Este elemento especifica la codificación de caracteres del documento, es decir, el conjunto de caracteres que el documento puede utilizar. utf-8es un conjunto de caracteres universal que incluye prácticamente cualquier carácter de cualquier idioma. Esto significa que su página web podrá mostrar cualquier idioma, por lo que es una buena idea configurarlo en todas las páginas web que cree. 
  
- Nota: algunos navegadores (como Chrome) corrigen automáticamente las codificaciones incorrectas, por lo que, según el navegador que uses, es posible que no veas este problema. De todas formas, debes configurar una codificación utf-8en tu página para evitar posibles problemas en otros navegadores.
+ Nota: algunos navegadores (como Chrome) corrigen automáticamente las codificaciones incorrectas, por lo que, según el navegador que uses, es posible que no veas este problema. De todas formas, debes configurar una codificación `utf-8` en tu página para evitar posibles problemas en otros navegadores.
 
 # Aprendizaje activo: Experimente con la codificación de caracteres
 
@@ -421,9 +425,9 @@ Por ejemplo, en esta historia, el `<h1>` elemento representa el título de la hi
 
 Depende de usted qué representan los elementos involucrados, siempre que la jerarquía tenga sentido. Solo debe tener en cuenta algunas prácticas recomendadas al crear dichas estructuras:
 
-* Lo mejor es utilizar uno solo <h1>por página: este es el encabezado de nivel superior y todos los demás se ubican debajo de este en la jerarquía.
+* Lo mejor es utilizar uno solo `<h1>` por página: este es el encabezado de nivel superior y todos los demás se ubican debajo de este en la jerarquía.
 
-* Asegúrate de utilizar los títulos en el orden correcto en la jerarquía. No utilices <h3>elementos para representar subtítulos seguidos de <h2>otros elementos para representar subtítulos secundarios, ya que eso no tiene sentido y dará lugar a resultados extraños.
+* Asegúrate de utilizar los títulos en el orden correcto en la jerarquía. No utilices `<h3>` elementos para representar subtítulos seguidos de `<h2>` otros elementos para representar subtítulos secundarios, ya que eso no tiene sentido y dará lugar a resultados extraños.
 
 * De los seis niveles de encabezado disponibles, debe intentar utilizar no más de tres por página, a menos que considere que es necesario. Los documentos con muchos niveles (por ejemplo, una jerarquía de encabezados profunda) se vuelven difíciles de manejar y de navegar. En tales ocasiones, es recomendable distribuir el contenido en varias páginas, si es posible.
 
@@ -447,7 +451,7 @@ Por otra parte, puedes hacer que cualquier elemento parezca un encabezado de niv
 </span>
 ```
 
-Este es un <span>elemento. No tiene semántica. Lo usas para envolver contenido cuando quieres aplicarle CSS (o hacerle algo con JavaScript) sin darle ningún significado adicional. (Descubrirás más sobre esto más adelante en el curso). Le hemos aplicado algo de CSS para que parezca un encabezado de nivel superior, pero como no tiene valor semántico, no obtendrá ninguno de los beneficios adicionales descritos anteriormente. Es una buena idea usar el elemento HTML relevante para el trabajo.
+Este es un `<span>` elemento. No tiene semántica. Lo usas para envolver contenido cuando quieres aplicarle CSS (o hacerle algo con JavaScript) sin darle ningún significado adicional. (Descubrirás más sobre esto más adelante en el curso). Le hemos aplicado algo de CSS para que parezca un encabezado de nivel superior, pero como no tiene valor semántico, no obtendrá ninguno de los beneficios adicionales descritos anteriormente. Es una buena idea usar el elemento HTML relevante para el trabajo.
 
 
 # Énfasis e importancia
@@ -464,7 +468,7 @@ Cuando queremos añadir énfasis en el lenguaje hablado, acentuamos ciertas pala
 
 La primera oración suena genuinamente aliviada de que la persona no haya llegado tarde. En cambio, la segunda, con las palabras "me alegro" y "llegó tarde" en cursiva, suena sarcástica o pasivo-agresiva, expresando molestia por el hecho de que la persona haya llegado un poco tarde.
 
-En HTML, utilizamos el <em>elemento (énfasis) para marcar estos casos. Además de hacer que el documento sea más interesante de leer, los lectores de pantalla los reconocen y pueden configurarse para que los lea en un tono de voz diferente. Los navegadores lo escriben en cursiva de forma predeterminada, pero no deberías usar esta etiqueta únicamente para obtener el estilo en cursiva. Para ello, utilizarías un <span>elemento y algo de CSS, o quizás un <i>elemento (ver a continuación).
+En HTML, utilizamos el `<em>` elemento (énfasis) para marcar estos casos. Además de hacer que el documento sea más interesante de leer, los lectores de pantalla los reconocen y pueden configurarse para que los lea en un tono de voz diferente. Los navegadores lo escriben en cursiva de forma predeterminada, pero no deberías usar esta etiqueta únicamente para obtener el estilo en cursiva. Para ello, utilizarías un `<span>` elemento y algo de CSS, o quizás un `<i>` elemento (ver a continuación).
 
 ```html
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
@@ -476,7 +480,7 @@ Para enfatizar palabras importantes, solemos ponerlas en relieve en el lenguaje 
 > Este líquido es altamente tóxico .
 > Cuento contigo, no llegues tarde!
 
-En HTML, utilizamos el <strong>elemento (importancia fuerte) para marcar dichas instancias. Además de hacer que el documento sea más útil, los lectores de pantalla las reconocen y pueden configurarse para que las digan en un tono de voz diferente. Los navegadores le dan estilo a este texto en negrita de forma predeterminada, pero no debería utilizar esta etiqueta únicamente para obtener un estilo en negrita. Para ello, debe utilizar un <span>elemento y algo de CSS, o quizás un <b>elemento (consulte a continuación).
+En HTML, utilizamos el `<strong>` elemento (importancia fuerte) para marcar dichas instancias. Además de hacer que el documento sea más útil, los lectores de pantalla las reconocen y pueden configurarse para que las digan en un tono de voz diferente. Los navegadores le dan estilo a este texto en negrita de forma predeterminada, pero no debería utilizar esta etiqueta únicamente para obtener un estilo en negrita. Para ello, debe utilizar un `<span>` elemento y algo de CSS, o quizás un `<b>` elemento (consulte a continuación).
 
 ```html
 <p>This liquid is <strong>highly toxic</strong>.</p>
@@ -493,21 +497,21 @@ Puedes anidar fuerte y énfasis uno dentro del otro si lo deseas:
 
 
 # Cursiva, negrita, subrayado…
-Los elementos que hemos analizado hasta ahora tienen una semántica asociada muy clara. La situación con <b>, <i>, y <u>es algo más complicada. Surgieron para que la gente pudiera escribir texto en negrita, cursiva o subrayado en una época en la que CSS todavía no se admitía o no se admitía en absoluto. Elementos como este, que solo afectan a la presentación y no a la semántica, se conocen como elementos de presentación y ya no deberían utilizarse porque, como hemos visto antes, la semántica es muy importante para la accesibilidad, el SEO, etc.
+Los elementos que hemos analizado hasta ahora tienen una semántica asociada muy clara. La situación con `<b>`, `<i>`, y `<u>` es algo más complicada. Surgieron para que la gente pudiera escribir texto en negrita, cursiva o subrayado en una época en la que CSS todavía no se admitía o no se admitía en absoluto. Elementos como este, que solo afectan a la presentación y no a la semántica, se conocen como elementos de presentación y ya no deberían utilizarse porque, como hemos visto antes, la semántica es muy importante para la accesibilidad, el SEO, etc.
 
-HTML5 redefinido <b>, <i>y <u>con nuevos roles semánticos, algo confusos.
+HTML5 redefinido `<b>`, `<i>`y `<u>` con nuevos roles semánticos, algo confusos.
 
-Esta es la mejor regla que puedes recordar: solo es apropiado usar <b>, <i>, o <u>para transmitir un significado que tradicionalmente se transmite con negrita, cursiva o subrayado cuando no hay un elemento más adecuado (y generalmente lo hay). Considera si <strong>, <em>, <mark>o <span>podrían ser más apropiados.
+Esta es la mejor regla que puedes recordar: solo es apropiado usar `<b>`, `<i>`, o `<u>` para transmitir un significado que tradicionalmente se transmite con negrita, cursiva o subrayado cuando no hay un elemento más adecuado (y generalmente lo hay). Considera si `<strong>`, `<em>`, `<mark>`o `<span>`podrían ser más apropiados.
 
 Mantenga siempre una actitud de accesibilidad. El concepto de cursiva no resulta muy útil para quienes utilizan lectores de pantalla o un sistema de escritura distinto del alfabeto latino.
 
-* <i>se utiliza para transmitir un significado que tradicionalmente se transmite en cursiva: palabras extranjeras, designaciones taxonómicas, términos técnicos, un pensamiento…
+* `<i>`se utiliza para transmitir un significado que tradicionalmente se transmite en cursiva: palabras extranjeras, designaciones taxonómicas, términos técnicos, un pensamiento…
 
-* <b>Se utiliza para transmitir un significado que tradicionalmente se transmite en negrita: palabras clave, nombres de productos, frases iniciales…
+* `<b>` Se utiliza para transmitir un significado que tradicionalmente se transmite en negrita: palabras clave, nombres de productos, frases iniciales…
 
-* <u>se utiliza para transmitir un significado que tradicionalmente se transmite mediante el subrayado: nombre propio, falta de ortografía…
+* `<u>` se utiliza para transmitir un significado que tradicionalmente se transmite mediante el subrayado: nombre propio, falta de ortografía…
 
 
 # Nota: 
-> Las personas asocian fuertemente el subrayado con los hipervínculos. Por lo tanto, en > la Web, es mejor subrayar únicamente los vínculos. Utilice el <u>elemento cuando sea   > semánticamente apropiado, pero considere usar CSS para cambiar el subrayado
+> Las personas asocian fuertemente el subrayado con los hipervínculos. Por lo tanto, en > la Web, es mejor subrayar únicamente los vínculos. Utilice el `<u>` elemento cuando sea   > semánticamente apropiado, pero considere usar CSS para cambiar el subrayado
 > predeterminado a algo más apropiado en la Web.
